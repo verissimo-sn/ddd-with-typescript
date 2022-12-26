@@ -34,6 +34,10 @@ export class Customer {
     this._active = false;
   }
 
+  get status() {
+    return this._active;
+  }
+
   get id() {
     return this._id;
   }
