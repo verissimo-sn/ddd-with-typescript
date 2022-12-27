@@ -20,7 +20,7 @@ export class Product {
     }
 
     if (this._price <= 0) {
-      throw new Error('Price is greater than 0');
+      throw new Error('Price should greater than 0');
     }
   }
 
