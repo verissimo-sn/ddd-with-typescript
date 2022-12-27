@@ -9,7 +9,12 @@
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "test": "jest --runInBand --detectOpenHandles"
   },
-  "dependencies": {},
+  "dependencies": {
+    "reflect-metadata": "^0.1.13",
+    "sequelize": "^6.28.0",
+    "sequelize-typescript": "^2.1.5",
+    "sqlite3": "^5.1.4"
+  },
   "devDependencies": {
     "@types/jest": "^29.2.4",
     "@types/supertest": "^2.0.11",
