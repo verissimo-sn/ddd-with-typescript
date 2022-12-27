@@ -18,7 +18,7 @@ describe('Unit: Product Entity', () => {
     }).toThrowError('Name is required');
     expect(() => {
       const fakeProduct = new Product('fakeId', 'customerId', 0);
-    }).toThrowError('Price is greater than 0');
+    }).toThrowError('Price should greater than 0');
   });
 
   it('should change name correctly', () => {
