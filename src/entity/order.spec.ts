@@ -2,9 +2,10 @@ import { Order } from './order';
 import { OrderItem } from './order_item';
 
 describe('Unit: Order Entity', () => {
+  const item1 = new OrderItem('id1', 'item 1', 'productId', 10, 2);
+  const item2 = new OrderItem('id2', 'item 2', 'productId', 20, 3);
+
   it('should create a Order correctly', () => {
-    const item1 = new OrderItem('id1', 'item 1', 10);
-    const item2 = new OrderItem('id2', 'item 2', 20);
     const fakeOrder = new Order('fakeId', 'customerId', [item1, item2]);
 
     expect(fakeOrder.id).toStrictEqual('fakeId');
@@ -13,9 +14,6 @@ describe('Unit: Order Entity', () => {
   });
 
   it('should throw error when id, customerId or item is empty', () => {
-    const item1 = new OrderItem('id1', 'item 1', 10);
-    const item2 = new OrderItem('id2', 'item 2', 20);
-
     expect(() => {
       const fakeOrder = new Order('', 'customerId', [item1, item2]);
     }).toThrowError('Id is required');
@@ -28,10 +26,8 @@ describe('Unit: Order Entity', () => {
   });
 
   it('should calculate total correctly', () => {
-    const item1 = new OrderItem('id1', 'item 1', 10);
-    const item2 = new OrderItem('id2', 'item 2', 20);
     const fakeOrder = new Order('orderID', 'customerId', [item1, item2]);
 
-    expect(fakeOrder.total()).toBe(30);
+    expect(fakeOrder.total()).toBe(80);
   });
 });
