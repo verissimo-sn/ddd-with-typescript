@@ -3,6 +3,7 @@ import { Address } from './address';
 export class Customer {
   private _id: string;
   private _name: string;
+  private _rewardPoints = 0;
   private _address?: Address;
   private _active = false;
 
@@ -49,6 +50,14 @@ export class Customer {
   changeName(name: string) {
     this._name = name;
     this.validate();
+  }
+
+  get rewardPoints() {
+    return this._rewardPoints;
+  }
+
+  addRewardPoints(points: number) {
+    this._rewardPoints += points;
   }
 
   get address() {
