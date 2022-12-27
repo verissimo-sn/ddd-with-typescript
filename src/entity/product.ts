@@ -40,4 +40,9 @@ export class Product {
   get price() {
     return this._price;
   }
+
+  changePrice(price: number) {
+    this._price = price;
+    this.validate();
+  }
 }
