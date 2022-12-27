@@ -9,6 +9,11 @@ export class Order {
     this._id = id;
     this._customerId = customerId;
     this._items = items;
+    this.validate();
+  }
+
+  total() {
+    return this._items.reduce((acc, item) => acc + item.price, 0);
   }
 
   validate() {
@@ -17,7 +22,7 @@ export class Order {
     }
 
     if (!this._customerId.length) {
-      throw new Error('Name is required');
+      throw new Error('CustomerId is required');
     }
 
     if (!this._items.length) {
