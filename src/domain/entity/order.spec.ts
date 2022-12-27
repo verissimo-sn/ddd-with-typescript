@@ -1,5 +1,5 @@
 import { Order } from './order';
-import { OrderItem } from './order_item';
+import { OrderItem } from './order-item';
 
 describe('Unit: Order Entity', () => {
   const item1 = new OrderItem('id1', 'item 1', 'productId', 10, 2);
