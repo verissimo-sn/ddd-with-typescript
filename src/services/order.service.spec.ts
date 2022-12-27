@@ -1,8 +1,19 @@
+import { Customer } from '../entity/customer';
 import { Order } from '../entity/order';
 import { OrderItem } from '../entity/order_item';
 import { OrderService } from './order.service';
 
 describe('Unit: Order service', () => {
+  it('should place an order', () => {
+    const customer = new Customer('c1', 'customer');
+    const item = new OrderItem('i1', 'order item', '1234', 10, 5);
+
+    const order = OrderService.placeOrder(customer, [item]);
+
+    expect(customer.rewardPoints).toBe(25);
+    expect(order.total()).toBe(50);
+  });
+
   it('should get total of all orders', () => {
     const item1 = new OrderItem('i1', 'order1', '123', 10, 1);
     const item2 = new OrderItem('i2', 'order2', '123', 20, 2);
