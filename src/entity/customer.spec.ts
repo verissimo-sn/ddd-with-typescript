@@ -62,4 +62,14 @@ describe('Unit: Customer Entity', () => {
     fakeCustomer.deactivate();
     expect(fakeCustomer.status).toBe(false);
   });
+
+  it('should set rewardPoints correctly', () => {
+    const fakeCustomer = new Customer('123', 'Customer 1');
+    const fakeAddress = new Address('street', 123, 123, 'city', 'country');
+    fakeCustomer.address = fakeAddress;
+    fakeCustomer.addRewardPoints(20);
+    expect(fakeCustomer.rewardPoints).toBe(20);
+    fakeCustomer.addRewardPoints(20);
+    expect(fakeCustomer.rewardPoints).toBe(40);
+  });
 });
