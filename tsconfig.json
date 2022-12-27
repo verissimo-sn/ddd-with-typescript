@@ -1,14 +1,14 @@
 {
   "compilerOptions": {
-    "target": "ES6",
+    "target": "ES2020",
     "strict": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "module": "commonjs",
     "baseUrl": "./src",
     "paths": {
-      "@modules/*": ["modules/*"],
-      "@routes/*": ["routes/*"]
+      "@domain/*": ["domain/*"],
+      "@infra/*": ["infra/*"]
     },
     "resolveJsonModule": true,
     "esModuleInterop": true,
