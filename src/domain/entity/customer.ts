@@ -64,7 +64,7 @@ export class Customer {
     return this._address as Address;
   }
 
-  set address(address: Address) {
+  changeAddress(address: Address) {
     this._address = address;
   }
 }

@@ -31,7 +31,7 @@ describe('Unit: Customer Entity', () => {
   it('should change address correctly', () => {
     const fakeCustomer = new Customer('123', 'Customer 1');
     const fakeAddress = new Address('street', 123, 123, 'city', 'country');
-    fakeCustomer.address = fakeAddress;
+    fakeCustomer.changeAddress(fakeAddress);
 
     expect(fakeCustomer.address).toStrictEqual(fakeAddress);
   });
@@ -47,7 +47,7 @@ describe('Unit: Customer Entity', () => {
   it('should activate customer correctly', () => {
     const fakeCustomer = new Customer('123', 'Customer 1');
     const fakeAddress = new Address('street', 123, 123, 'city', 'country');
-    fakeCustomer.address = fakeAddress;
+    fakeCustomer.changeAddress(fakeAddress);
     fakeCustomer.activate();
 
     expect(fakeCustomer.status).toBe(true);
@@ -56,7 +56,7 @@ describe('Unit: Customer Entity', () => {
   it('should deactivate customer correctly', () => {
     const fakeCustomer = new Customer('123', 'Customer 1');
     const fakeAddress = new Address('street', 123, 123, 'city', 'country');
-    fakeCustomer.address = fakeAddress;
+    fakeCustomer.changeAddress(fakeAddress);
     fakeCustomer.activate();
     expect(fakeCustomer.status).toBe(true);
     fakeCustomer.deactivate();
@@ -66,7 +66,7 @@ describe('Unit: Customer Entity', () => {
   it('should set rewardPoints correctly', () => {
     const fakeCustomer = new Customer('123', 'Customer 1');
     const fakeAddress = new Address('street', 123, 123, 'city', 'country');
-    fakeCustomer.address = fakeAddress;
+    fakeCustomer.changeAddress(fakeAddress);
     fakeCustomer.addRewardPoints(20);
     expect(fakeCustomer.rewardPoints).toBe(20);
     fakeCustomer.addRewardPoints(20);
