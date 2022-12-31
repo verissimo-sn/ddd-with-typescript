@@ -5,7 +5,7 @@ export class ProductCreatedEvent implements IEvent {
   eventData;
 
   constructor(eventData: any) {
-    this.eventData = eventData();
+    this.eventData = eventData;
     this.dataTimeOcurred = new Date();
   }
 }
