@@ -1,6 +1,7 @@
 import { Address } from '../values-object/address';
+import { ICustomer } from './customer.interface';
 
-export class Customer {
+export class Customer implements ICustomer {
   private _id: string;
   private _name: string;
   private _rewardPoints = 0;
