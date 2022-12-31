@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-empty-interface */
-import { Customer } from '@domain/entity/customer';
 
-import { IRepository } from './repository.interface';
+import { IRepository } from '@domain/@shared/repository/repository.interface';
+
+import { Customer } from '../entity/customer';
 
 export interface ICustomerRepository extends IRepository<Customer> { }

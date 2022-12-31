@@ -1,6 +1,6 @@
-import { Address } from '@domain/entity/address';
-import { Customer } from '@domain/entity/customer';
-import { ICustomerRepository } from '@domain/repository/customer-repository.interface';
+import { Customer } from '@domain/customer/entity/customer';
+import { ICustomerRepository } from '@domain/customer/repository/customer-repository.interface';
+import { Address } from '@domain/customer/values-object/address';
 import { CustomerModel } from '@infra/db/sequelize/model/customer.model';
 
 export class CustomerRepository implements ICustomerRepository {

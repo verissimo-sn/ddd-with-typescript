@@ -1,5 +1,5 @@
-import { Order } from '@domain/entity/order';
-import { IOrderRepository } from '@domain/repository/order-repository.interface';
+import { Order } from '@domain/checkout/entity/order';
+import { IOrderRepository } from '@domain/checkout/repository/order-repository.interface';
 import { OrderItemModel } from '@infra/db/sequelize/model/order-item.model';
 import { OrderModel } from '@infra/db/sequelize/model/order.model';
 
