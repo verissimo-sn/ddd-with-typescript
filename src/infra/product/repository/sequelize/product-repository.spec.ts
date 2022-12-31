@@ -2,7 +2,7 @@ import { Sequelize } from 'sequelize-typescript';
 
 import { Product } from '@domain/product/entity/product';
 
-import { ProductModel } from '../db/sequelize/model/product.model';
+import { ProductModel } from './product.model';
 import { ProductRepository } from './product.repositpry';
 
 describe('Integration: Product repository', () => {

@@ -5,14 +5,14 @@ import { OrderItem } from '@domain/checkout/entity/order-item';
 import { Customer } from '@domain/customer/entity/customer';
 import { Address } from '@domain/customer/values-object/address';
 import { Product } from '@domain/product/entity/product';
-import { CustomerModel } from '@infra/db/sequelize/model/customer.model';
-import { OrderItemModel } from '@infra/db/sequelize/model/order-item.model';
-import { OrderModel } from '@infra/db/sequelize/model/order.model';
-import { ProductModel } from '@infra/db/sequelize/model/product.model';
+import { CustomerModel } from '@infra/customer/repository/sequelize/customer.model';
+import { CustomerRepository } from '@infra/customer/repository/sequelize/customer.repository';
+import { ProductModel } from '@infra/product/repository/sequelize/product.model';
+import { ProductRepository } from '@infra/product/repository/sequelize/product.repositpry';
 
-import { CustomerRepository } from './customer.repositpry';
+import { OrderItemModel } from './order-item.model';
+import { OrderModel } from './order.model';
 import { OrderRepository } from './order.repositpry';
-import { ProductRepository } from './product.repositpry';
 
 describe('Integration: Order repository', () => {
   let sequelize: Sequelize;

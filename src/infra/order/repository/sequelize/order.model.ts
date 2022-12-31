@@ -8,7 +8,8 @@ import {
   Table,
 } from 'sequelize-typescript';
 
-import { CustomerModel } from './customer.model';
+import { CustomerModel } from '@infra/customer/repository/sequelize/customer.model';
+
 import { OrderItemModel } from './order-item.model';
 
 @Table({

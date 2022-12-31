@@ -1,7 +1,8 @@
 import { Customer } from '@domain/customer/entity/customer';
 import { ICustomerRepository } from '@domain/customer/repository/customer-repository.interface';
 import { Address } from '@domain/customer/values-object/address';
-import { CustomerModel } from '@infra/db/sequelize/model/customer.model';
+
+import { CustomerModel } from './customer.model';
 
 export class CustomerRepository implements ICustomerRepository {
   async create(entity: Customer): Promise<void> {
