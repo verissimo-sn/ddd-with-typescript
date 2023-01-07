@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/no-empty-interface */
+import { IRepository } from "@domain/@shared/repository/repository.interface";
+import { Order } from "../entity/order";
 
-import { Order } from '@domain/entity/order';
-
-import { IRepository } from './repository.interface';
 
 export interface IOrderRepository extends IRepository<Order> { }
