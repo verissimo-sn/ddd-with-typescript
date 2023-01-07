@@ -1,14 +1,11 @@
 import { OrderItem } from './order-item';
 
 export class Order {
-  private _id: string;
-  private _customerId: string;
-  private _items: OrderItem[];
-
-  constructor(id: string, customerId: string, items: OrderItem[]) {
-    this._id = id;
-    this._customerId = customerId;
-    this._items = items;
+  constructor(
+    private _id: string,
+    private _customerId: string,
+    private _items: OrderItem[]
+  ) {
     this.validate();
   }
 

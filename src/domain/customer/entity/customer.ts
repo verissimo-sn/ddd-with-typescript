@@ -2,16 +2,14 @@ import { Address } from '../values-object/address';
 import { ICustomer } from './customer.interface';
 
 export class Customer implements ICustomer {
-  private _id: string;
-  private _name: string;
   private _rewardPoints = 0;
-  private _address?: Address;
   private _active = false;
 
-  constructor(id: string, name: string, address?: Address) {
-    this._id = id;
-    this._name = name;
-    this._address = address;
+  constructor(
+    private _id: string,
+    private _name: string,
+    private _address?: Address
+  ) {
     this.validate();
   }
 
