@@ -1,3 +1,4 @@
+import { CustomerValidatorFactory } from '../factory/customer-validator.factory';
 import { Address } from '../values-object/address';
 import { ICustomer } from './customer.interface';
 
@@ -14,13 +15,7 @@ export class Customer implements ICustomer {
   }
 
   validate() {
-    if (!this.name.length) {
-      throw new Error('Name is required');
-    }
-
-    if (!this._id.length) {
-      throw new Error('Id is required');
-    }
+    CustomerValidatorFactory.create().validate(this);
   }
 
   activate() {
