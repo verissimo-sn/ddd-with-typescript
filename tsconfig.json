@@ -8,7 +8,8 @@
     "baseUrl": "./src",
     "paths": {
       "@domain/*": ["domain/*"],
-      "@infra/*": ["infra/*"]
+      "@infra/*": ["infra/*"],
+      "@useCase/*": ["useCase/*"]
     },
     "resolveJsonModule": true,
     "esModuleInterop": true,
