@@ -10,7 +10,6 @@ export class FindCustomerUseCase
 
   async execute(input: InputFindCustomer): Promise<OutputFindCustomer> {
     const result = await this.customerRepository.find(input.id);
-    console.log("🚀 ~ file: find-customer.use-case.ts:13 ~ execute ~ result", result)
 
     if (!result) throw new Error('Consumer not found');
 
