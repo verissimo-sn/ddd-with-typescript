@@ -24,6 +24,7 @@ describe('Unit: Customer Factory', () => {
 
     expect(customer.id).toBeDefined();
     expect(customer.name).toBe('Customer');
+    expect(customer).toBeInstanceOf(Customer);
     expect(customer.address).toBeInstanceOf(Address);
     expect(customer.address.street).toStrictEqual(address.street);
     expect(customer.address.number).toStrictEqual(address.number);
