@@ -3,7 +3,6 @@ import { IUseCase } from "../../@shared/useCase/use-case.interface";
 import { InputCreateCustomer, OutputCreateCustomer } from "./create-customer.dto";
 
 import { CustomerFactory } from "@domain/customer/factory/customer.factory";
-import { Customer } from "@domain/customer/entity/customer";
 
 export class CreateCustomerUseCase implements IUseCase<InputCreateCustomer, OutputCreateCustomer> {
   constructor(private readonly customerRepository: ICustomerRepository) { }
